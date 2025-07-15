@@ -1,0 +1,46 @@
+.list-view {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+  place-items: center;
+  justify-content: center;
+  background: #e3e8ed;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+@media only screen and (max-width: 768px) {
+  .list-view {
+    padding-top: 5rem;
+  }
+}
+.rating-text{
+  margin: 0 1%;
+  font-size: large;
+}
+
+.star {
+  font-size: 18px;
+  color: #ccc; /* Default star color */
+}
+
+.star.active {
+  color: gold; /* Full star color */
+}
+
+.star.half-active {
+  color: gold;
+  position: relative;
+}
+
+.star.half-active:before {
+  content: '\2605'; /* Unicode for star */
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0%;
+  color: #ccc; /* Empty half-star color */
+  clip-path: inset(0 50% 0 0); /* Mask the right half of the star */
+}
+
